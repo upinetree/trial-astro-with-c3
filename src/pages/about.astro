@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
 
 const pageTitle = "About Me";
 
@@ -21,9 +22,7 @@ const skillColor = "gold";
 
 <Layout title={pageTitle}>
   <main>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Navigation />
     
     <h1>{pageTitle}</h1>
 
