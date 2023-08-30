@@ -2,11 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 
+const pageTitle = "Home Page";
+
 const now = new Date();
 const nowString = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={pageTitle}>
   <main>
     <svg
       class="astro-a"
@@ -36,7 +38,8 @@ const nowString = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
         </linearGradient>
       </defs>
     </svg>
-    <h1>Hello!, <span class="text-gradient">{nowString}</span></h1>
+	<h1>{pageTitle}</h1>
+    <h2><span class="text-gradient">{nowString}</span></h1>
     <p class="instructions">
       To get started, open the directory <code>src/pages</code> in your project.<br
       />
