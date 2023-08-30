@@ -1,0 +1,23 @@
+---
+import Hamburger from './Hamburger.astro';
+import Navigation from "./Navigation.astro";
+---
+
+<header>
+  <nav>
+    <Hamburger />
+    <Navigation />
+  </nav>
+</header>
+
+<style>
+  header {
+    margin: auto;
+    padding: 0.5rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+</style>
