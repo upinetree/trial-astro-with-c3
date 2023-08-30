@@ -1,11 +1,12 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,48 +21,3 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-
-  h1 {
-    color: rgb(var(--accent-light));
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-
-  a {
-    color: rgb(var(--accent));
-  }
-</style>
