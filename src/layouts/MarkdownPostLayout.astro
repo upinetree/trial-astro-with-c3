@@ -8,7 +8,30 @@ const { frontmatter } = Astro.props;
   <main>
     <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
     <p>Written by :{frontmatter.author}</p>
+    {
+      Array.isArray(frontmatter.tags) && (
+        <ul class="tags">
+          {frontmatter.tags.map((t: string) => (
+            <li><a href={`/tags/${t}`}>{t}</a></li>
+          ))}
+        </ul>
+      )
+    }
     <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
     <slot />
   </main>
 </Layout>
+
+<style>
+  .tags {
+    display: flex;
+    padding-inline-start: 0;
+  }
+  .tags li {
+    margin-right: 8px;
+    padding: 4px;
+    list-style: none;
+    border: 1px solid white;
+    font-size: 0.8rem;
+  }
+</style>
