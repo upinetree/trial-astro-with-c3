@@ -27,11 +27,17 @@ const { frontmatter } = Astro.props;
     display: flex;
     padding-inline-start: 0;
   }
+  .tags a {
+    color: rgb(var(--accent-light));
+    text-decoration: none;
+  }
   .tags li {
     margin-right: 8px;
     padding: 4px;
     list-style: none;
-    border: 1px solid white;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background-color: rgb(var(--accent-dark));
     font-size: 0.8rem;
+    border-radius: .5em;
   }
 </style>
