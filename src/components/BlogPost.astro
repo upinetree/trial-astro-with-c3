@@ -1,5 +1,13 @@
 ---
-const { url, title, date } = Astro.props;
+const { url, title, date, imageUrl } = Astro.props;
 ---
 
-<li><a href={url}>{title}, {date.slice(0, 10)}</a></li>
+<li>
+  <a href={url}>
+    <span>{title}</span>,
+    <span>{date.slice(0, 10)}</span>
+    <div>
+      <img src={imageUrl} width="100" transition:name={`image-${imageUrl}`} />
+    </div>
+  </a>
+</li>

@@ -12,12 +12,19 @@ const { frontmatter } = Astro.props;
       Array.isArray(frontmatter.tags) && (
         <ul class="tags">
           {frontmatter.tags.map((t: string) => (
-            <li><a href={`/tags/${t}`}>{t}</a></li>
+            <li>
+              <a href={`/tags/${t}`}>{t}</a>
+            </li>
           ))}
         </ul>
       )
     }
-    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+    <img
+      src={frontmatter.image.url}
+      width="700"
+      alt={frontmatter.image.alt}
+      transition:name={`image-${frontmatter.image.url}`}
+    />
     <slot />
   </main>
 </Layout>
@@ -38,6 +45,6 @@ const { frontmatter } = Astro.props;
     border: 1px solid rgba(var(--accent-light), 25%);
     background-color: rgb(var(--accent-dark));
     font-size: 0.8rem;
-    border-radius: .5em;
+    border-radius: 0.5em;
   }
 </style>
