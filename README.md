@@ -1,3 +1,6 @@
+> [!NOTE]
+> Working page is here: https://trial-astro-with-c3-github-integration.pages.dev/
+
 # Astro Starter Kit: Basics
 
 ```
